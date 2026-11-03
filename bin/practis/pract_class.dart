@@ -20,13 +20,15 @@ class Book {
   double _rating = 0.0;
   String _author;
 
-  Book({required this.title, required this.pages, required String author}): _author = author;
+  Book({required this.title, required this.pages, required String author})
+    : _author = author;
   Book.withRating({
     required this.title,
     required this.pages,
     required String author,
     required double rating,
-  }) : _author = author, _rating=rating;
+  }) : _author = author,
+       _rating = rating;
 
   //Сеттер
   set bookRating(double value) {
@@ -36,6 +38,7 @@ class Book {
       print('Ошибка: рейтинг должен быть от 0 до 5');
     }
   }
+
   //Геттер
   double get bookRating => _rating;
 
