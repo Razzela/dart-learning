@@ -8,7 +8,7 @@ enum SuperAbility {
   protect,
   dodge,
   resurrect,
-  stun,
+  stun
 }
 
 abstract class GameCharacter {
@@ -224,13 +224,13 @@ class Witcher extends Hero {
 
 class Thor extends Hero {
   Thor(String name, int health, int damage)
-    : super(name, health, damage, SuperAbility.stun);
+      : super(name, health, damage, SuperAbility.stun);
 
   @override
   void applySuperPower(Boss boss, List<Hero> heroes) {
     if (RpgGame.random.nextBool()) {
       boss.isStunned = true;
-      print('<<<<<Thor $name stunned the boss!!!<<<<<');
+      print('>>>>>Thor $name stunned the boss!!!<<<<<');
     }
   }
 }
